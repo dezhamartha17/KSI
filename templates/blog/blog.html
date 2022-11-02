@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Blog</title>
+</head>
+
+<body>
+    {% for v in post %}
+    <h1 class="pertama">{{v.title}}</h1>
+    <h1 class="pertama">{{v.body}}</h1>
+    {% endfor %}
+    <a href='{% url "home:index" %}'>Home</a>
+    <a href='{% url "home:dinamis" year="2022"%}'>Year</a>
+
+</body>
+
+</html>
